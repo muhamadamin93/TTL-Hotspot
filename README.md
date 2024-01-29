@@ -5,44 +5,31 @@ Disclaimer :
 2. Don't use them for illegal activities.
 3. You are the only responsible for your actions :exclamation:
 
-:see_no_evil: :hear_no_evil: :speak_no_evil:
-
 -------------------------------------------------------------------------
 
+**Windows**
 
-#### UNTUK BYPASS HOTSPOT KAT LAPTOP UNTUK GUNA DATA SELAIN DARI HOTSPOT DI HANDPHONE 
+netsh int ipv4 set glob defaultcurhoplimit=65
 
-1. buka hotspot di phone
-2. di laptop/pc, connect kepada hotspot
-3. di laptop, buka cmd, run as administrator 
-4. type "netsh int ipv4 set glob defaultcurhoplimit=65" di cmd tu
-5. tekan enter dan akan keluar ok
-6. dah bypass
+netsh int ipv6 set glob defaultcurhoplimit=65
 
+--------------------
 
--------------------------------------------------------------------------
+**Linux**
 
+sudo sysctl -w net.ipv4.ip_default_ttl=65
 
-#### INFORMATION
+sudo sysctl net.ipv6.conf.all.hop_limit=65
 
+-------------------
 
-Using hotspot data from your mobile phone on your laptop/computer
+**Check current TTL**
 
-1. netsh int ipv4 set glob defaultcurhoplimit=65
-2. netsh int ipv6 set glob defaultcurhoplimit=65
+Windows - ping ip
 
+Linux - sysctl net.ipv4.ip_default_ttl
 
-Use your laptop as a Wi-Fi repeater:
-
-1. netsh int ipv4 set glob defaultcurhoplimit=64
-2. netsh int ipv6 set glob defaultcurhoplimit=64
-
-
-Set it to default:
-
-1. netsh int ipv4 set glob defaultcurhoplimit=128
-2. netsh int ipv6 set glob defaultcurhoplimit=128
-
+**************************************************************************
 
 Default TTL and Hop Limit values vary between different operating systems, here are the defaults for a few:
 
