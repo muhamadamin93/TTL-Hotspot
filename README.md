@@ -1,10 +1,3 @@
-# :warning: For Educational Purposes Only :exclamation:
-
-Disclaimer :
-1. For educational purposes only.
-2. Don't use them for illegal activities.
-3. You are the only responsible for your actions :exclamation:
-
 -------------------------------------------------------------------------
 
 **Windows**
@@ -15,11 +8,19 @@ netsh int ipv6 set glob defaultcurhoplimit=65
 
 --------------------
 
-**Linux**
+**Linux** 
+
+Ubuntu
 
 sudo sysctl -w net.ipv4.ip_default_ttl=65
 
 sudo sysctl net.ipv6.conf.all.hop_limit=65
+
+
+Manjaro (Arch)
+nano /etc/sysctl.d/sysctl.conf
+net.ipv4.ip_default_ttl=65
+
 
 -------------------
 
